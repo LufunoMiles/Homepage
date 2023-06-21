@@ -1,0 +1,137 @@
+/* Reset default styles */
+body {
+    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Navbar styles */
+nav {
+    background-color: #010212;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo {
+    font-family: 'Archivo Black', sans-serif;
+    color: #fff;
+    font-size: 24px;
+}
+
+a li:hover {
+    color: #acf000;
+}
+
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+.main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/img/anas-alshanti-feXpdV001o4-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 4rem;
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    margin-top: 8rem;
+    font-size: 4rem;
+}
+
+p {
+    color: aliceblue;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.more {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: 40px;
+    width: 14rem;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #fff;
+    align-content: center;
+    background: linear-gradient(to right, #ac0999 1%, transparent 40%,transparent 60% , #c70bb1  100%);
+    box-shadow: inset 0 0 10px #ac0999, 0 0 9px 3px #c70bb1;
+}
+
+.more:hover {
+    color: #ffbaf7;
+    box-shadow: inset 0 0 10px #e00ac7, 0 0 9px 3px #c70bb1;
+  }
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 60px;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links li a {
+        color: #fff;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
